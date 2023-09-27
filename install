@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+
+# Installation script for Lydia
+# application list to install: vim git tmux curl lynx nextcloud urlencode fzf
+# desktop list to install: i3 i3lock feh dex xinput
+
+echo "source ~/dot/bash-rc" >> ~/.bashrc
+ln -s ~/dot/dot-vimrc ~/.vimrc
+
+# vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# after that open vim and run :PlugInstall
+
+git config --global user.name "dr.uqbar"
+git config --global user.email "nicksiv@disroot.org"
+
+# i3 configs connection 
+mkdir ~/.config/i3
+mkdir ~/.config/i3status
+mkdir ~/.config/polybar
+
+cd ~/.config/i3
+mv config config-old
+ln -s ~/dot/i3-config-kde config
+ln -s ~/dot/nordic.png ~/.config/i3/i3wallpaper
+ln -s ~/dot/i3lock.png i3lock.png
+
+cd ~/.config/polybar
+ln -s ~/dot/polybar config.ini
+ln -s ~/dot/polybar-launch.sh launch
+
+# fzf installation (reply to the prompts with y)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install

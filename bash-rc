@@ -1,0 +1,7 @@
+alias upd="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+alias upf="sudo dnf update"
+alias st="syncthing"
+alias stt="syncthing --no-browser"
+alias off="sudo shutdown -h now"
+					       
+export PATH=~/dot:$PATH
