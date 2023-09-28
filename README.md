@@ -7,5 +7,6 @@ vim git tmux curl lynx nextcloud fzf i3 i3lock suckless-tools feh dex xinput pol
 
 ## Setup
 * clone this repo `git clone https://github.com/nicksiv/dot`
-* chmod+x and run the install script
+* chmod+x and run the `install` script
+* start `vim` and run `:PlugInstall`
 
