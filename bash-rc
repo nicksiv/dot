@@ -4,5 +4,14 @@ alias st="syncthing"
 alias stt="syncthing --no-browser"
 alias off="sudo shutdown -h now"
 alias t="task"
-					       
+alias ta="task add"
+alias index='vim -c VimwikiIndex'
+alias ind=index
+
+function newnote() {
+  vim -c "VimwikiIndex" -c "VimwikiGoto $1"
+}
+# call na "my new note title" to create a note
+alias na=newnote
+
 export PATH=~/dot:$PATH

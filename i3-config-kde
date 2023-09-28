@@ -180,11 +180,11 @@
   bindsym $mod+r mode "resize"
 
 # Configure 5px of space between windows and to the screen edges.
-gaps inner 5px
+gaps inner 10px
 
 # Configure an additional 5px of extra space to the screen edges,
 # for a total gap of 10px to the screen edges, and 5px between windows.
-gaps outer 7px
+gaps outer 10px
 
 # Overwrite gaps to 0, I need all the space I can get on workspace 3.
 #workspace 2 gaps inner 0

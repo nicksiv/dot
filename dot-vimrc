@@ -58,20 +58,17 @@ nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
 
-":set path+=~/**
 
 "toggle Explore
 :map <F2> :Lexplore<CR>
 
-map <F7> :set spell!<CR>
+:map <F7> :set spell!<CR>
 
 "F7 opens info with markdown syntax
 "  :map <F7> :e ~/lydia/data/wiki/tiddlers/glossary.md <Bar>
 "  	\ :set syntax=markdown <CR>
 "F12 opens vimrc
   :map <F12> :e ~/dot/dot-vimrc <CR>G
-
-"cd ~/notes/
 
 call plug#begin()
 
@@ -96,10 +93,13 @@ let g:pandoc#spell#enabled = 0
 let g:pandoc#syntax#conceal#urls = 1
 colorscheme gruvbox
 let g:airline_theme='base16_gruvbox_dark_hard'
-"let g:vimwiki_list = [{'path': '~/lydia/data/notes/',
-"                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" User directory for notes
+cd ~/roman/notes
+set path+=~/roman/notes/**
+let g:vimwiki_list = [{'path': '~/roman/notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 1
-"let g:tiddlywiki_dir = '~/tabitha/data/wiki'
 
 augroup pandoc_syntax
     autocmd! FileType vimwiki set syntax=markdown.pandoc
@@ -111,6 +111,10 @@ set wildmode=longest:full,full
 :nmap <Leader>dp <Plug>VimwikiDiaryPrevDay
 :nmap <Leader>dn <Plug>VimwikiDiaryNextDay
 
+autocmd FileType markdown set cursorline
+autocmd FileType markdown set conceallevel=2
+
+"let g:tiddlywiki_dir = '~/tabitha/data/wiki'
 "let g:ledger_maxwidth = 80
 "let g:ledger_fillstring = '    -'
 "let g:ledger_fold_blanks = 0
@@ -119,5 +123,3 @@ set wildmode=longest:full,full
 "au FileType ledger inoremap <silent> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
 "au FileType ledger vnoremap <silent> <Tab> :LedgerAlign<CR>
 ":nmap <Leader>dd :call ledger#transaction_state_toggle(line('.'), ' *?!')<CR>
-autocmd FileType markdown set cursorline
-autocmd FileType markdown set conceallevel=2
