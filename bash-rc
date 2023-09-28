@@ -10,6 +10,7 @@ alias ind=index
 alias glo="vim ~/roman/notes/glossary.md"
 alias gl=glo
 alias inbox="vim ~/Nextcloud/Notes/ZKINBOX.md"
+alias m="mutt -Z ; echo $(t +PENDING count) tasks"
 function newnote() {
   vim -c "VimwikiIndex" -c "VimwikiGoto $1"
 }
@@ -25,3 +26,5 @@ alias na=newnote
 alias ns=searchnote
 
 export PATH=~/dot:$PATH
+export EDITOR=vim
+

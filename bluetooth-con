@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+# Open bluetooth and activate it to connect to paired device that is powered on
+# https://computingforgeeks.com/connect-to-bluetooth-device-from-linux-terminal/
+
+### Ubuntu / Debian ###
+#sudo apt update
+#sudo apt  install bluetooth bluez bluez-tools rfkill
+
+### Fedora ###
+#sudo dnf install bluez bluez-tools
+
+rfkill unblock bluetooth
+
