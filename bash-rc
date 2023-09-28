@@ -7,11 +7,21 @@ alias t="task"
 alias ta="task add"
 alias index='vim -c VimwikiIndex'
 alias ind=index
-
+alias glo="vim ~/roman/notes/glossary.md"
+alias gl=glo
+alias inbox="vim ~/Nextcloud/Notes/ZKINBOX.md"
 function newnote() {
   vim -c "VimwikiIndex" -c "VimwikiGoto $1"
 }
+
+function searchnote() {
+  vim -c "VimwikiIndex" -c "VWS $1"
+}
+
 # call na "my new note title" to create a note
 alias na=newnote
+
+# call ns "search string" to search all notes"
+alias ns=searchnote
 
 export PATH=~/dot:$PATH
