@@ -8,7 +8,7 @@ set from = 'nsivridis@gmail.com'
 set use_from = yes
 set envelope_from = yes
 
-source "~/.mutt/pwd"
+source "gpg -d ~/.mutt/pwd.gpg |"
 
 # My mailboxes
 set folder = 'imaps://imap.gmail.com:993'

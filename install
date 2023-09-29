@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 
-# Installation script for Lydia
-# application list to install: vim git tmux curl lynx nextcloud urlencode fzf
-# desktop list to install: i3 i3lock feh dex xinput
+# Installation script 
 
 echo "source ~/dot/bash-rc" >> ~/.bashrc
 ln -s ~/dot/dot-vimrc ~/.vimrc
@@ -13,6 +11,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 git config --global user.name "dr.uqbar"
 git config --global user.email "nicksiv@disroot.org"
+
+# Mutt
+mkdir -p ~/.mutt/cache/headers                                                                
+mkdir ~/.mutt/cache/bodies
+touch ~/.mutt/certificates
+ln -s ~/dots/mutt-rc ~/.muttrc
+
 
 # i3 configs connection 
 mkdir ~/.config/i3
