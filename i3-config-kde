@@ -265,7 +265,7 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # KDE wallet  
 exec --no-startup-id /usr/libexec/pam_kwallet_init
-#exec --no-startup-id nextcloud
+exec --no-startup-id nextcloud
 
 
 set $bg #282828
