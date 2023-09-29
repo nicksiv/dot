@@ -10,7 +10,7 @@ alias ind=index
 alias glo="vim ~/roman/notes/glossary.md"
 alias gl=glo
 alias inbox="vim ~/Nextcloud/Notes/ZKINBOX.md"
-alias m="mutt -Z ; echo $(t +PENDING count) tasks"
+alias m="mutt"
 function newnote() {
   vim -c "VimwikiIndex" -c "VimwikiGoto $1"
 }
