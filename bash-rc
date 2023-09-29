@@ -11,6 +11,9 @@ alias glo="vim ~/roman/notes/glossary.md"
 alias gl=glo
 alias inbox="vim ~/Nextcloud/Notes/ZKINBOX.md"
 alias m="mutt"
+alias rd="./dot/radio"
+alias radio="mpg123 -@ roman/radios.m3u"
+
 function newnote() {
   vim -c "VimwikiIndex" -c "VimwikiGoto $1"
 }

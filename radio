@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+# Select radio station
+
+if [ $# -eq 0 ]
+then
+  #no arguments
+  cat -n ~/roman/radios.m3u
+  echo
+  read -p "Enter station number:" stat
+  awk "NR==$stat" roman/radios.m3u | xargs mpg123 
+else
+  awk "NR==$1" roman/radios.m3u | xargs mpg123 
+fi
+

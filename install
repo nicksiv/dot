@@ -35,5 +35,6 @@ ln -s ~/dot/polybar config.ini
 ln -s ~/dot/polybar-launch.sh launch
 
 # fzf installation (reply to the prompts with y)
+# https://pinshuai.github.io/FZF-Tutorial/
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install

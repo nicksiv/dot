@@ -3,7 +3,7 @@
 > 2023-09-28: Nick Sivridis
 
 ## Packages to install
-vim git tmux curl lynx nextcloud fzf i3 i3lock suckless-tools feh dex xinput polybar syncthing mutt
+vim git tmux curl lynx nextcloud fzf i3 i3lock suckless-tools feh dex xinput polybar syncthing mutt ripgrep
 
 ## Setup
 * clone this repo `git clone https://github.com/nicksiv/dot`
