@@ -223,7 +223,7 @@ smart_gaps inverse_outer
   # gaps inner 20
   # gaps outer 1
 
-  default_border pixel
+  default_border pixel 2
   workspace_auto_back_and_forth yes
   exec --no-startup-id feh --bg-scale ~/.config/i3/i3wallpaper
 
@@ -256,10 +256,10 @@ for_window [class="plasmashell"] floating enable
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
 
   # autorun apps
-  # exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/gnome-terminal'
-  # exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+  exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+  exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
   # exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/thunderbird'
- 
+  assign [class="firefox"] 2 
 # Enable trackpad click
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
@@ -303,7 +303,7 @@ set $lightgray #bdae93
   #         }
 
 # class                 border|backgr|text|indicator|child_border
-client.focused          $lightgray $lightgray $bg $purple $darkgray
+client.focused          $lightgray $lightgray $bg $purple $yellow
 client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
 client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
 client.urgent           $red $red $white $red $red
