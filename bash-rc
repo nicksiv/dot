@@ -30,7 +30,8 @@ alias ns=searchnote
 
 export PATH=~/dot:$PATH
 export EDITOR=vim
-export FZF_DEFAULT_COMMAND='rg --files --hidden' # if using rg. Options include "--hidden --follow --glob --type". See help with `rg -h`
+#export FZF_DEFAULT_COMMAND='rg --files --hidden' # if using rg. Options include "--hidden --follow --glob --type". See help with `rg -h`
 export FZF_DEFAULT_OPTS='-m --height 50% --layout=reverse --border --inline-info'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 
 
