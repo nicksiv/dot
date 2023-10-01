@@ -17,7 +17,8 @@ mkdir -p ~/.mutt/cache/headers
 mkdir ~/.mutt/cache/bodies
 touch ~/.mutt/certificates
 ln -s ~/dots/mutt-rc ~/.muttrc
-
+cd ~/.mutt                                                                                                                                          
+git clone https://git.sthu.org/repos/mutt-gruvbox.git gruvbox  
 
 # i3 configs connection 
 mkdir ~/.config/i3
