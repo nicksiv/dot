@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+# Search in all my note files, include symlinks
+
+# Prompt the user for input
+read -p "Enter the pattern to search for: " pattern
+
+find -L ~/roman/* -type f > /tmp/zks.txt
+grep -in "$pattern" /tmp/zks.txt
+
+read -p "Enter file number to edit: " fileno
+file_to_edit=$(awk "NR==$fileno" /tmp/zks.txt)
+
+# Check if $file_to_edit is empty or not found
+if [ -z "$file_to_edit" ]; then
+  echo "Invalid file number or file not found."
+else
+  vim "$file_to_edit"
+fi
+
+# Clean up temporary file
+rm /tmp/zks.txt
+
