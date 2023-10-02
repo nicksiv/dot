@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+# Open a random file from all notes
+
+
+find -L ~/roman/* -type f > /tmp/zks.txt
+
+# Get the total number of lines in the file
+total_lines=$(wc -l < /tmp/zks.txt)
+
+# Generate a random number between 1 and the total number of lines
+random_line=$((RANDOM % total_lines + 1))
+
+# Get the file corresponding to the random line
+file_to_edit=$(sed -n "${random_line}p" /tmp/zks.txt)
+
+# Check if $file_to_edit is empty or not found
+if [ -z "$file_to_edit" ]; then
+  echo "Error: Could not retrieve a random file."
+else
+  vim "$file_to_edit"
+fi
+
+# Clean up temporary file
+rm /tmp/zks.txt

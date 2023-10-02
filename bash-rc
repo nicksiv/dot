@@ -13,6 +13,8 @@ alias inbox="vim ~/Nextcloud/Notes/ZKINBOX.md"
 alias m="mutt"
 alias rd="./dot/radio"
 alias radio="mpg123 -@ roman/radios.m3u"
+alias zs="zksearch"
+alias rnd="random"
 
 function newnote() {
   vim -c "VimwikiIndex" -c "VimwikiGoto $1"
