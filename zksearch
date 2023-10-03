@@ -3,7 +3,14 @@
 # Search in all my note files, include symlinks
 
 # Prompt the user for input
+if  [ $# -eq 0 ]
+then
+# no args
 read -p "Enter the pattern to search for: " pattern
+else
+pattern=$1
+fi
+
 
 find -L ~/roman/* -type f > /tmp/zks.txt
 grep -in "$pattern" /tmp/zks.txt

@@ -14,6 +14,7 @@ alias m="mutt"
 alias rd="./dot/radio"
 alias radio="mpg123 -@ roman/radios.m3u"
 alias zs="zksearch"
+alias zg="zkgrep"
 alias rnd="random"
 
 function newnote() {

@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+# Search in all my note files, include symlinks
+
+# Prompt the user for input
+if  [ $# -eq 0 ]
+then
+# no args
+read -p "Enter the pattern to search for: " pattern
+else
+pattern=$1
+fi
+echo "========== RESULTS =========="
+grep -inrT --include=*.{md,org,tid,txt} --color=always "$pattern" ~/roman/* #| more
