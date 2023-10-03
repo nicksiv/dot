@@ -12,3 +12,7 @@ pattern=$1
 fi
 echo "========== RESULTS =========="
 grep -inrT --include=*.{md,org,tid,txt} --color=always "$pattern" ~/roman/* #| more
+
+#Idea: open vim with results to gf to filename
+#grep -inrT --include=*.{md,org,tid,txt} --color=never "$pattern" ~/roman/* > /tmp/grp.txt
+#vim /tmp/grp.txt
